@@ -1,10 +1,17 @@
 import React from "react";
+import styled from 'styled-components';
+
+const HeaderDiv = styled.div`
+    box-sizing: border-box;
+    padding: 50px 5%;
+    background: dimgray;
+    margin: 0;
+`
 
 export default function Header() {
     return (
-        <div className="header">
+        <HeaderDiv>
             <h1>NASA Astronomy Picture of the Day</h1>
-            <h2>A Lambda School Project</h2>
-        </div>
+        </HeaderDiv>
     );
 }
