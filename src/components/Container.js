@@ -2,6 +2,18 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import Image from './Image';
 import AboutImage from './AboutImage';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    box-sizing: border-box;
+    padding: 0 5%;
+    width: 100%;
+    background: dimgray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+`
 
 export default function Container() {
     const [picture, setPicture] = useState([]);
@@ -17,9 +29,9 @@ export default function Container() {
             })
     }, []);
     return (
-        <div className='container'>
+        <Wrapper>
             <Image picture={picture}/>
             <AboutImage picture={picture}/>
-        </div>
+        </Wrapper>
     )
 }
